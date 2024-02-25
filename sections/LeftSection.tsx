@@ -1,6 +1,6 @@
-import { Star } from "@/animations/Star";
+import { Star } from "@/components/animations";
+import { CrossLine } from "@/components/common";
 import Image from "next/image";
-import { CrossLine } from "@/components/CrossLine";
 
 export const LeftSection = () => {
   return (

@@ -1,8 +1,5 @@
-import { Frame } from "@/components/Frame";
-import { RunningLine } from "@/components/RunningLine";
-import { LeftSection } from "@/sections/LeftSection";
-import { RightSection } from "@/sections/RightSection";
-import { MainSection } from "@/sections/MainSection";
+import { Frame, RunningLine } from "@/components/common";
+import { LeftSection, MainSection, RightSection } from "@/sections";
 
 export default function Home() {
   return (
@@ -13,7 +10,6 @@ export default function Home() {
         <div className="m-10 grid flex-1 grid-cols-[16rem_auto_16rem]">
           <LeftSection />
           <MainSection />
-          {/* <div></div> */}
           <RightSection />
         </div>
         <Frame position="right" />

@@ -1,4 +1,4 @@
-import { generateRandomString } from "@/actions/generateRandomString";
+import { generateRandomString } from "@/actions";
 import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 import { FC } from "react";

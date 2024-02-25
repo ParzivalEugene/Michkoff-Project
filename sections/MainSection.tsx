@@ -1,10 +1,10 @@
-import { Spinner } from "@/animations/Spinner";
-import { BoxWithCorners } from "@/components/BoxWithCorners";
-import { CrossLine } from "@/components/CrossLine";
+import { Spinner } from "@/components/animations";
+import { BoxWithCorners, CrossLine } from "@/components/common";
 import Image from "next/image";
 import Link from "next/link";
 import { GrUbuntu } from "react-icons/gr";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import { ASCII } from '@/components/3d/face/ascii'
 
 export const MainSection = () => {
   const data = {
@@ -22,7 +22,7 @@ export const MainSection = () => {
   };
 
   return (
-    <section className="relative p-8">
+    <section className="relative flex p-8">
       <CrossLine
         horizontalPosition="left"
         verticalPosition="top"
@@ -69,7 +69,7 @@ export const MainSection = () => {
             <div className="flex justify-center border border-primary-500 px-6 py-3">
               <h1 className="text-4xl font-bold uppercase">Michkoff.com</h1>
             </div>
-            <div className="flex h-full min-w-96 items-center justify-center border-x border-primary-500">
+            <div className="flex h-full min-w-96 items-center justify-center border-x border-primary-500 bg-background">
               <Spinner />
             </div>
             <Link href="https://links.michkoff.com">
@@ -123,6 +123,9 @@ export const MainSection = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="absolute right-0 top-0 aspect-square h-full">
+        <ASCII />
       </div>
     </section>
   );

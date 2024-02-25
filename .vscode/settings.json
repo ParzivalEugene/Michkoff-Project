@@ -8,5 +8,10 @@
   "editor.tabSize": 2,
   "tailwindCSS.experimental.classRegex": [
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ]
+  ],
+  "files.exclude": {
+    ".next": true,
+    "node_modules": true
+  },
+  "exportall.config.folderListener": ["/renderers"]
 }

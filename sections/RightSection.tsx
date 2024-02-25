@@ -1,6 +1,6 @@
-import { generateRandomString } from "@/actions/generateRandomString";
+import { generateRandomString } from "@/actions";
+import { CrossLine } from "@/components/common";
 import Image from "next/image";
-import { CrossLine } from "@/components/CrossLine";
 
 export const RightSection = () => {
   const string = generateRandomString(92);
