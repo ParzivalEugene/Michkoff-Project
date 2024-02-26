@@ -1,10 +1,10 @@
+import { Bust } from "@/components/3d";
 import { Spinner } from "@/components/animations";
 import { BoxWithCorners, CrossLine } from "@/components/common";
 import Image from "next/image";
 import Link from "next/link";
 import { GrUbuntu } from "react-icons/gr";
 import { HiOutlineLocationMarker } from "react-icons/hi";
-import { ASCII } from '@/components/3d/face/ascii'
 
 export const MainSection = () => {
   const data = {
@@ -125,7 +125,7 @@ export const MainSection = () => {
         </div>
       </div>
       <div className="absolute right-0 top-0 aspect-square h-full">
-        <ASCII />
+        <Bust />
       </div>
     </section>
   );

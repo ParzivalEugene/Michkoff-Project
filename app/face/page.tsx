@@ -1,7 +1,7 @@
-import { ASCII } from "@/components/3d/face/ascii";
+import { Bust } from "@/components/3d";
 
 const page = () => {
-  return <ASCII />;
+  return <Bust />;
 };
 
 export default page;
