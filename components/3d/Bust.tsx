@@ -1,6 +1,6 @@
 "use client";
 import { BustModel } from "@/components/models";
-import { AsciiRenderer, OrbitControls } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
 export const Bust = () => {
@@ -10,20 +10,20 @@ export const Bust = () => {
         enablePan={false}
         enableZoom={false}
         autoRotate
-        autoRotateSpeed={10}
+        autoRotateSpeed={1}
       />
       <directionalLight position={[100, 100, 100]} intensity={0.5} />
       <directionalLight position={[-100, -100, -100]} intensity={0.4} />
       <ambientLight intensity={0.2} />
 
-      <AsciiRenderer
+      {/* <AsciiRenderer
         invert={false}
         resolution={0.3}
         fgColor="#3BDEDE"
         bgColor=""
         color={false}
         characters=" @80GCLft1i;:,." // @80GCLft1i;:,.
-      />
+      /> */}
       <BustModel />
     </Canvas>
   );

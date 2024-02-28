@@ -26,20 +26,41 @@ type GLTFResult = GLTF & {
 
 export function BustModel(props: JSX.IntrinsicElements["group"]) {
   const group = useRef<THREE.Group | null>(null);
-  const { nodes, materials, animations } = useGLTF(
-    "/models/bust.glb",
-  ) as GLTFResult;
+  const {
+    nodes,
+    materials: modelMaterial,
+    animations,
+  } = useGLTF("/models/bust.glb") as GLTFResult;
   const { actions } = useAnimations(animations, group);
+
+  const topMaterial = new THREE.PointsMaterial({
+    color: 0x3bdede,
+    size: 0.01,
+    clipShadows: true,
+  });
+  const bottomMaterial = new THREE.PointsMaterial({
+    color: 0xef3939,
+    size: 0.01,
+  });
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">
-        <mesh
+        <points
           name="Mesh_0"
           geometry={nodes.Mesh_0.geometry}
-          material={new THREE.MeshStandardMaterial({ color: 0xff69b4 })}
-          position={[0, 0, 0]}
+          material={topMaterial}
+          position={[0, -0.5, 0]}
           rotation={[-0.31, 1.425, 0.332]}
           scale={10}
+        />
+        <points
+          name="Mesh_0"
+          geometry={nodes.Mesh_0.geometry}
+          material={bottomMaterial}
+          position={[0, -0.5, 0]}
+          rotation={[-0.31, 1.425, 0.332]}
+          scale={9.5}
         />
       </group>
     </group>

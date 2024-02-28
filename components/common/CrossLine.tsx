@@ -25,7 +25,7 @@ const Line: FC<LineProps> = ({
   type,
 }) => {
   const getStyle = () => {
-    const color = type === "main" ? "rgb(15, 87, 87)" : "rgb(59 222 222)";
+    const color = type === "main" ? "rgb(15, 87, 87)" : "rgb(59, 222, 222)";
     if (direction === "horizontal") {
       return {
         width: type === "main" ? LINE_LENGTH : TIP_LENGTH,
